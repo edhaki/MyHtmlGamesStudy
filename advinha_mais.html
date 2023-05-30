@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<input/>
+
+
+<button> Compare com o meu segredo </button>
+
+<script> 
+
+
+	var segredos = [2,5,10,6,25,70];
+	
+	var input = document.querySelector("input");
+	input.focus();
+	 
+	function verifica(){
+	
+	var verificaNumero = false;
+	for(var posicaoArray = 0; posicaoArray < segredos.length; posicaoArray++){
+	
+	if (input.value == segredos[posicaoArray]) {
+	
+	alert("ACERTOU O NUMERO PARABÉNS");
+	verificaNumero = true;
+	
+	break;
+	
+	}
+}
+	if (verificaNumero == false){
+	alert("VOCÊ NÃO ACERTOU O NUMERO TENTE NOVAMENTE!");
+	}
+	
+	input.value ="";
+	input.focus();
+	
+}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+
+</script>

@@ -1,0 +1,28 @@
+
+<canvas width="600" height="400"> </canvas>
+
+<script> 
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = "grey";
+pincel.fillRect(0,0, 600,400);
+
+function cliqueMouse(eventoClique) {
+
+x = eventoClique.pageX - tela.offsetLeft;
+y = eventoClique.pageY - tela.offsetTop;
+
+alert("Sua Coodernada do Mouse é: " + x + " , " + y);
+console.log(eventoClique);
+
+
+
+}
+
+tela.onclick = cliqueMouse;
+
+
+</script>
+
